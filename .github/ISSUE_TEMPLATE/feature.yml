@@ -1,0 +1,124 @@
+name: Feature request
+description: Suggest an improvement to AnnotateIt
+title: "[Feature]: "
+labels:
+  - "type: feature"
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an improvement.
+
+        Submitting a request does not guarantee implementation or a delivery date. Requests are
+        read and considered against the current product direction; see [ROADMAP.md](https://github.com/AnnotateIt-AI/annotateit-community/blob/main/ROADMAP.md).
+
+        This issue is public. Please do not include private datasets, personal information,
+        credentials, or anything confidential to you or your organization.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you start
+      options:
+        - label: I searched the existing issues and did not find this request already open.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or workflow limitation
+      description: What is difficult, slow or impossible today? Describe the problem, not the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Concrete use case
+      description: |
+        Describe a real situation in which you would use this, in enough detail to be understood.
+        Keep it general — do not include confidential project details.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Proposed outcome
+      description: What should be possible once this is addressed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or current workaround
+      description: How do you handle this today, in AnnotateIt or elsewhere?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Relevant platform
+      description: Where would this matter most?
+      options:
+        - Web
+        - Windows
+        - macOS
+        - iPhone/iPad
+        - All platforms
+    validations:
+      required: false
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Relevant project or task type
+      options:
+        - Object detection
+        - Instance segmentation
+        - Keypoint detection
+        - Single-label classification
+        - Multi-label classification
+        - Hierarchical classification
+        - Not specific to one task type
+        - Other
+    validations:
+      required: false
+
+  - type: dropdown
+    id: data-format
+    attributes:
+      label: Relevant dataset format
+      description: Only if the request concerns a specific import or export format.
+      options:
+        - COCO
+        - YOLO
+        - Pascal VOC
+        - Datumaro
+        - Supervisely Video
+        - Plain ZIP
+        - Other
+        - Not format specific
+    validations:
+      required: false
+
+  - type: textarea
+    id: privacy-considerations
+    attributes:
+      label: Privacy or local-first considerations
+      description: |
+        AnnotateIt runs on your device. If this request has implications for working offline,
+        keeping data local, or handling sensitive material, describe them here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: References, sketches, or examples from other tools that illustrate the idea.
+    validations:
+      required: false
