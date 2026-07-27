@@ -1,0 +1,166 @@
+name: Import or export problem
+description: Report a dataset format compatibility problem
+title: "[Import/Export]: "
+labels:
+  - "type: bug"
+  - "area: import-export"
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when a dataset does not import correctly, or when an export does not produce
+        the structure another tool expects.
+
+        **Do not upload a full private dataset.** This issue is public. A minimal synthetic
+        reproduction — a handful of files with redacted names and made-up annotations that still
+        shows the problem — is far more useful and safe than a real dataset. Never post user
+        images, confidential annotations, license data, API keys or unredacted local paths.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you start
+      options:
+        - label: I searched the existing issues and did not find this problem already reported.
+          required: true
+        - label: This report contains no private dataset content, personal information or secrets.
+          required: true
+
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Direction
+      description: Does the problem occur on the way in or on the way out?
+      options:
+        - Import
+        - Export
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: AnnotateIt version or build
+      description: Shown in the application. Include the build number if you have it.
+      placeholder: "version and build number exactly as shown in the app"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Web
+        - Windows
+        - macOS
+        - iPhone/iPad
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Project or task type
+      options:
+        - Object detection
+        - Instance segmentation
+        - Keypoint detection
+        - Single-label classification
+        - Multi-label classification
+        - Hierarchical classification
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dataset-format
+    attributes:
+      label: Dataset format
+      options:
+        - COCO
+        - YOLO
+        - Pascal VOC
+        - Datumaro
+        - Supervisely Video
+        - Plain ZIP
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: source-tool
+    attributes:
+      label: Source or target tool and version
+      description: Which tool produced the dataset, or which tool has to read the export?
+      placeholder: "for example: another annotation tool, a training script, an internal converter"
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What the import or export should have produced.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What was produced instead — missing labels, wrong coordinates, empty archive, and so on.
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-message
+    attributes:
+      label: Exact error message
+      description: Copy the message text exactly, if there was one. Remove any personal data first.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: structure
+    attributes:
+      label: Minimal redacted directory tree or annotation fragment
+      description: |
+        A short, redacted example of the structure involved, for example:
+
+        ```
+        dataset/
+          images/
+            sample_0001.jpg
+          labels/
+            sample_0001.txt
+        ```
+
+        Rename files, shorten the tree, and replace real class names and paths. Do not paste an
+        entire annotation file.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps, ideally against a minimal synthetic sample.
+      placeholder: |
+        1. Create a project of type ...
+        2. Import the sample described above using format ...
+        3. Open the Media view
+        4. The annotations are ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Dataset size, whether a round trip through AnnotateIt reproduces it, anything else relevant.
+    validations:
+      required: false

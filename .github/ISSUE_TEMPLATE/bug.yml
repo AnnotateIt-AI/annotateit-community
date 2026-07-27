@@ -1,0 +1,145 @@
+name: Bug report
+description: Report a reproducible problem with AnnotateIt
+title: "[Bug]: "
+labels:
+  - "type: bug"
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to file a report.
+
+        **Privacy warning — this issue is public.** Do not post private datasets, user images,
+        confidential annotations, API keys, license data, unredacted local file paths, full system
+        logs or personal information. Use a synthetic or redacted sample if a sample is needed.
+
+        **Security vulnerabilities do not belong here.** Do not disclose them in a public issue.
+        Follow the [security policy](https://annotateit.ai/legal/security/) and email
+        umno.annotateit@gmail.com with "Security report" in the subject.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you start
+      options:
+        - label: I searched the existing issues and did not find this problem already reported.
+          required: true
+        - label: This report contains no security-sensitive information, private data or secrets.
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: AnnotateIt version or build
+      description: Shown in the application. Include the build number if you have it.
+      placeholder: "version and build number exactly as shown in the app"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Where did the problem occur?
+      options:
+        - Web
+        - Windows
+        - macOS
+        - iPhone/iPad
+    validations:
+      required: true
+
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system
+      description: Name and version of the operating system.
+      placeholder: "for example: Windows 11 24H2, macOS 15.4, iPadOS 18.4"
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      description: Only relevant if you use the web app.
+      placeholder: "for example: Chrome 134, Safari 18.4"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Project or task type
+      description: The type of project in which the problem appears.
+      options:
+        - Object detection
+        - Instance segmentation
+        - Keypoint detection
+        - Single-label classification
+        - Multi-label classification
+        - Hierarchical classification
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem description
+      description: A concise description of what goes wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps that let someone else reach the same result.
+      placeholder: |
+        1. Create a project of type ...
+        2. Import ...
+        3. Select ...
+        4. The problem appears
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-message
+    attributes:
+      label: Exact error message
+      description: Copy the message text exactly, if there was one. Remove any personal data first.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: |
+        Anything else that helps, such as dataset size, whether the problem is intermittent, or
+        when it started.
+
+        Screenshots and short recordings are welcome, but do not upload private datasets,
+        confidential images, license information, API keys, unredacted local paths, or full logs
+        containing personal data. You are never required to share your dataset.
+    validations:
+      required: false

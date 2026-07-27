@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://app.annotateit.ai/docs
+    about: Project types, annotation tools, on-device AI features, and dataset import and export formats.
+  - name: Product support
+    url: https://annotateit.ai/legal/support/
+    about: Installation, licensing and usage questions, including how to reach us by email.
+  - name: Security reports
+    url: https://annotateit.ai/legal/security/
+    about: Do not disclose vulnerabilities publicly. Email umno.annotateit@gmail.com.
