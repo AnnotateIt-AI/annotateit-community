@@ -2,7 +2,7 @@ blank_issues_enabled: false
 contact_links:
   - name: Documentation
     url: https://app.annotateit.ai/docs
-    about: Project types, annotation tools, on-device AI features, and dataset import and export formats.
+    about: Project types, image and video annotation, on-device AI, dataset management, platform differences, and import/export formats.
   - name: Product support
     url: https://annotateit.ai/legal/support/
     about: Installation, licensing and usage questions, including how to reach us by email.

@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve AnnotateIt. This repository is the public community space for the product: it collects bug reports, feature requests, import and export problems, public release notes and the public roadmap. The AnnotateIt application source code is proprietary and is not hosted here.
+Thank you for helping improve AnnotateIt. This repository is the public community space for the product: it collects bug reports, feature requests and import/export problems, maintains the public roadmap, and links to the canonical product changelog. The AnnotateIt application source code is proprietary and is not hosted here.
 
 Everyone taking part is expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
@@ -14,7 +14,7 @@ Issues:
 
 Pull requests:
 
-- corrections and clarifications to the public documents in this repository (`README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `ROADMAP.md`, `CHANGELOG.md`);
+- corrections and clarifications to the public documents in this repository (`README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `ROADMAP.md`, and the changelog pointer in `CHANGELOG.md`);
 - fixes to issue forms and other community configuration;
 - broken links, typos, wording and formatting fixes.
 
@@ -34,14 +34,14 @@ Content that exposes private or personal data may be removed without notice.
 Use the [bug report form](https://github.com/AnnotateIt-AI/annotateit-community/issues/new?template=bug.yml). A report is actionable when it contains:
 
 - the AnnotateIt version or build, the platform, and the operating system (plus browser and version for the web app);
-- the project or task type;
+- the project type and affected workflow, such as video tracks, dataset versions, quality, splits, on-device AI, custom models, batch review or the local REST API;
 - numbered steps that let someone else reach the same result;
 - what you expected, and what happened instead;
 - the exact error message, if there was one.
 
 Reproduce the problem on a current build where that is practical, and search the existing issues first. If a sample is needed, use a minimal synthetic or redacted one — you are never required to share your dataset.
 
-For a dataset format problem, use the [import/export form](https://github.com/AnnotateIt-AI/annotateit-community/issues/new?template=import-export.yml) instead; it asks for the format and structure details that make such problems solvable.
+For a dataset format problem, use the [import/export form](https://github.com/AnnotateIt-AI/annotateit-community/issues/new?template=import-export.yml) instead; it covers COCO, YOLO, Pascal VOC, Datumaro, MOT, MOTS, KITTI, Supervisely Video and Plain ZIP and asks for the structure details that make such problems solvable.
 
 ## Proposing a feature
 
@@ -60,7 +60,7 @@ Please keep pull requests small and focused. A single change with a clear ration
 
 ## Accuracy of product claims
 
-Public documents in this repository must describe the product as it actually is. Any statement about a capability, platform, format, price or plan must be verifiable against the [official website](https://annotateit.ai/), the [documentation](https://app.annotateit.ai/docs), or the shipping product. Do not add versions, dates, features or release history that cannot be verified that way.
+Public documents in this repository must describe the product as it actually is. Any statement about a capability, platform, format, price or plan must be verifiable against the [official website](https://annotateit.ai/), the [documentation](https://app.annotateit.ai/docs), the [public changelog](https://annotateit.ai/changelog/), or the shipping product. Do not add versions, dates, features or release history that cannot be verified that way.
 
 The [roadmap](ROADMAP.md) describes direction, not commitments. Roadmap items are not promises, carry no dates, and may change or be dropped.
 

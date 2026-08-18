@@ -1,31 +1,9 @@
 # Changelog
 
-Public release notes for AnnotateIt AI.
+The canonical public changelog for the AnnotateIt web app is published at [annotateit.ai/changelog](https://annotateit.ai/changelog/).
 
-## Public changelog starts here
+Release notes live with the product documentation so that each published web version, release date and version-specific page comes from one maintained source. This file remains as a stable pointer for older links; release entries are not duplicated here.
 
-This public changelog begins now. Release notes for future versions will be added here after those versions are actually released, and only for changes that shipped.
+The native Windows, macOS and iPhone/iPad builds are versioned and published separately through their stores. Each store listing shows the version currently available on that platform, which can differ from the current web release.
 
-Earlier releases are not reconstructed retroactively. AnnotateIt shipped before this repository existed, and the release boundaries of those builds cannot be established from a source that is accurate enough to publish, so nothing is listed for them rather than something invented.
-
-A version may become available on different platforms at different times. Web, the Microsoft Store, the Mac App Store and the App Store each have their own publishing and review process, so the date an entry is published here does not necessarily match the date a build reaches you.
-
-Where to find the product itself:
-
-- [Download](https://annotateit.ai/download/) — Web, Windows, macOS, iPhone and iPad
-- [Documentation](https://app.annotateit.ai/docs)
-- [Roadmap](ROADMAP.md) — current direction, not a commitment
-
-## Format
-
-Future entries use this structure. Sections that have no content in a given release are omitted.
-
-```markdown
-## [version] — YYYY-MM-DD
-
-### Added
-
-### Improved
-
-### Fixed
-```
+For planned work rather than released changes, see [ROADMAP.md](ROADMAP.md).

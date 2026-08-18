@@ -11,7 +11,7 @@ body:
         Thank you for taking the time to file a report.
 
         **Privacy warning — this issue is public.** Do not post private datasets, user images,
-        confidential annotations, API keys, license data, unredacted local file paths, full system
+        confidential annotations, API keys, local REST API access tokens, license data, unredacted local file paths, full system
         logs or personal information. Use a synthetic or redacted sample if a sample is needed.
 
         **Security vulnerabilities do not belong here.** Do not disclose them in a public issue.
@@ -80,6 +80,27 @@ body:
         - Single-label classification
         - Multi-label classification
         - Hierarchical classification
+        - Not project-specific
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: product-area
+    attributes:
+      label: Product area
+      description: Which part of the workflow is affected?
+      options:
+        - Annotation tools
+        - Video annotation and tracks
+        - Media import, camera or image editor
+        - Dataset versions, quality, splits or history
+        - On-device AI or model management
+        - Custom ONNX models
+        - Batch pre-labelling and review
+        - Dataset import or export
+        - Local REST API
+        - Licensing or purchase
         - Other
     validations:
       required: true
@@ -139,7 +160,7 @@ body:
         when it started.
 
         Screenshots and short recordings are welcome, but do not upload private datasets,
-        confidential images, license information, API keys, unredacted local paths, or full logs
+        confidential images, license information, API keys, access tokens, unredacted local paths, or full logs
         containing personal data. You are never required to share your dataset.
     validations:
       required: false

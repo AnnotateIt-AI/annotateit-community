@@ -15,7 +15,7 @@ body:
         **Do not upload a full private dataset.** This issue is public. A minimal synthetic
         reproduction — a handful of files with redacted names and made-up annotations that still
         shows the problem — is far more useful and safe than a real dataset. Never post user
-        images, confidential annotations, license data, API keys or unredacted local paths.
+        images, confidential annotations, license data, API keys, access tokens or unredacted local paths.
 
   - type: checkboxes
     id: preflight
@@ -70,6 +70,7 @@ body:
         - Single-label classification
         - Multi-label classification
         - Hierarchical classification
+        - Not project-specific
         - Other
     validations:
       required: true
@@ -83,6 +84,9 @@ body:
         - YOLO
         - Pascal VOC
         - Datumaro
+        - MOT
+        - MOTS
+        - KITTI
         - Supervisely Video
         - Plain ZIP
         - Other
@@ -121,7 +125,7 @@ body:
       description: Copy the message text exactly, if there was one. Remove any personal data first.
       render: text
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: structure
@@ -161,6 +165,6 @@ body:
     id: additional-context
     attributes:
       label: Additional context
-      description: Dataset size, whether a round trip through AnnotateIt reproduces it, anything else relevant.
+      description: Dataset size, image or video media, tracks or attributes involved, whether a round trip through AnnotateIt reproduces it, and anything else relevant.
     validations:
       required: false

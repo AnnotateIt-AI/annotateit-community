@@ -98,6 +98,9 @@ body:
         - YOLO
         - Pascal VOC
         - Datumaro
+        - MOT
+        - MOTS
+        - KITTI
         - Supervisely Video
         - Plain ZIP
         - Other
@@ -110,8 +113,9 @@ body:
     attributes:
       label: Privacy or local-first considerations
       description: |
-        AnnotateIt runs on your device. If this request has implications for working offline,
-        keeping data local, or handling sensitive material, describe them here.
+        AnnotateIt is local-first. If this request has implications for working offline,
+        keeping data local, using an optional external service, or handling sensitive material,
+        describe them here.
     validations:
       required: false
 
